@@ -1,0 +1,8 @@
+{
+  "name": "Habesha Wedding Invitation",
+  "description": "An elegant, minimalist Amharic wedding invitation website with black cover, gold monogram ring, live countdown, timeline, and interactive RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

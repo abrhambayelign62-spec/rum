@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-rich-black: #0A0A0A;
+    --color-antique-gold: #C9A66B;
+    --color-gold-light: #F4E3B2;
+    --color-gold-mid: #B8874E;
+    --color-gold-dark: #7A5A2E;
+    --color-ivory: #EAE5E2;
+    --color-deep-teal: #1F5568;
+    --color-sage: #6FA37A;
+  }
+
+  body {
+    font-family: 'Noto Sans Ethiopic', system-ui, -apple-system, sans-serif;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+  }
+
+  /* Custom scroll snap styling */
+  .scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+  }
+}
+
+/* Typography Helpers */
+.font-ethiopic-serif {
+  font-family: 'Noto Serif Ethiopic', serif;
+}
+
+.font-ethiopic-sans {
+  font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Gold Metallic Shimmer Gradient */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F4E3B2 0%, #C9A66B 50%, #B8874E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #F4E3B2, #C9A66B, #7A5A2E) 1;
+}
+
+.gold-metallic-border {
+  border: 1px solid #C9A66B;
+  box-shadow: 0 0 15px rgba(201, 166, 107, 0.25);
+}
+
+.gold-ring-glow {
+  box-shadow: 0 0 30px rgba(201, 166, 107, 0.35), inset 0 0 20px rgba(244, 227, 178, 0.2);
+}
+
+/* Subtle spotlight beams on dark background */
+.spotlight-radial-beams {
+  background: 
+    radial-gradient(ellipse 70% 60% at 10% 0%, rgba(201, 166, 107, 0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 60% at 90% 0%, rgba(201, 166, 107, 0.14) 0%, transparent 70%),
+    radial-gradient(circle at 50% 30%, rgba(244, 227, 178, 0.08) 0%, transparent 65%),
+    #0A0A0A;
+}
+
+/* Soft shimmer animation */
+@keyframes shimmer {
+  0% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+.animate-pulse-subtle {
+  animation: shimmer 3.5s ease-in-out infinite;
+}
+
+/* Hide scrollbars for clean presentation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
